@@ -7,13 +7,7 @@ export const Detail = () => {
   const { lang } = useContext(LangContext);
   return (
     <p className="text-center" style={{ color: theme.fgColor }}>
-      {lang.name === "en"
-        ? theme.name === "light"
-          ? "light theme activated"
-          : "dark theme activated"
-        : theme.name === "light"
-        ? "กำลังใช้ธีมไลท์"
-        : "กำลังใช้ธีมดาร์ค"}
+      {theme.name === "light"? lang.detail.lightActivated: lang.detail.darkActivated}
     </p>
   );
 };
